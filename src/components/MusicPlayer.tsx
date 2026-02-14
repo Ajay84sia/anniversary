@@ -71,7 +71,7 @@ const MusicPlayer = () => {
         )}
       </AnimatePresence>
 
-      <div className="fixed bottom-20 right-6 z-50 md:bottom-10 md:right-10">
+      <div className="fixed bottom-20 right-6 z-50 md:bottom-8 md:right-10">
         <audio 
           ref={audioRef} 
           src={musicUrl} 
