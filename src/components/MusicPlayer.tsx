@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Music, Pause, Play, Heart } from 'lucide-react';
 import Button from './ui/Button';
-import musicUrl from '../assests/song.mp3';
+import musicUrl from '../assets/song.mp3';
 
 const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);

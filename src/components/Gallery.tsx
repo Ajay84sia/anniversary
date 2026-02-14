@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import img1 from '../assests/DEP00110.jpg';
-import img2 from '../assests/DEP00290.jpg';
-import img3 from '../assests/0Z4A2047.JPG';
-import img4 from '../assests/0Z4A2341.JPG';
-import img5 from '../assests/RAH2200.JPG';
-import img6 from '../assests/RAH2218.JPG';
+import img1 from '../assets/DEP00110.jpg';
+import img2 from '../assets/DEP00290.jpg';
+import img3 from '../assets/0Z4A2047.JPG';
+import img4 from '../assets/0Z4A2341.JPG';
+import img5 from '../assets/RAH2200.JPG';
+import img6 from '../assets/RAH2218.JPG';
 
 // Placeholder images using Unsplash
 const images = [
