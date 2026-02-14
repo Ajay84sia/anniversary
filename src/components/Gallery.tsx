@@ -35,19 +35,23 @@ const Gallery = () => {
           {images.map((src, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              whileHover={{ y: -10 }}
+              initial={{ opacity: 0, scale: 0.9, rotate: index % 2 === 0 ? 1 : -1 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: index % 2 === 0 ? 1 : -1 }}
+              whileHover={{ scale: 1.02, rotate: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-2xl shadow-md aspect-[4/5] md:aspect-square bg-white"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group relative p-1.5 rounded-2xl bg-gradient-to-br from-rose-300 via-pink-200 to-rose-300 shadow-xl shadow-rose-200/50 aspect-[4/5] md:aspect-square"
             >
-              <img 
-                src={src} 
-                alt={`Gallery image ${index + 1}`} 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="bg-white p-2 w-full h-full rounded-xl">
+                <div className="relative w-full h-full overflow-hidden rounded-lg">
+                  <img 
+                    src={src} 
+                    alt={`Gallery image ${index + 1}`} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-rose-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
